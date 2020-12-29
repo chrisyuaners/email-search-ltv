@@ -20,6 +20,7 @@ nav > div {
 
 main {
     flex-grow: 1;
+    background-color: #F8F8F8;
 }
 
 footer {
@@ -50,4 +51,26 @@ footer {
 
 nav, main, footer {
     flex-shrink: 0;
+}
+
+#loading {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#loading > img {
+    width: 165px;
+}
+
+#loading-text {
+    font-family: HelveticaNeue-Bold;
+    font-size: 24px;
+    color: #004A80;
+    letter-spacing: 0;
+    text-align: center;
+    margin-top: 28px;
 }
