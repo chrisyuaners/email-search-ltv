@@ -1,3 +1,23 @@
+/* Mobile Styles START */
+
+body {
+    margin: 0;
+    
+}
+
+/* Mobile Styles END */
+
+/* Tablet Styles START */
+
+@media screen and (min-width: 768px) {
+
+}
+
+/* Tablet Styles END */
+
+/* Desktop Styles START */
+
+@media screen and (min-width: 1200px) {
 /* Global Styles START */
 
 body {
@@ -7,6 +27,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+}
+
+#nav-container {
+    margin: auto;
+    width: 1010px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-right {
+    width: 68px;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav {
@@ -133,7 +166,7 @@ nav, main, footer {
 .email {
     background: #FFFFFF;
     box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.20);
-    border-radius: 3px;
+    border-radius: 6px;
     width: 780px;
     height: 50px;
     justify-content: center;
@@ -180,9 +213,27 @@ nav, main, footer {
     margin-right: 15px;
 }
 
+.search-error {
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin: auto;
+    width: 1013px;
+}
+
+.search-error-msg {
+    width: 259px;
+    background: #DC0015;
+    border-radius: 0px 0px 3px 3px;
+    padding: 5px 0px;
+    margin-top: -5px;
+}
+
 #info-container {
     background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
-    height: 68vh;
+    height: 716px;
 }
 
 #info-title {
@@ -220,6 +271,7 @@ nav, main, footer {
     width: 490px;
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .bullet-left {
@@ -264,7 +316,39 @@ nav, main, footer {
 /* No Results Styles START */
 
 #no-results-container {
-    height: 47vh;
+    height: 447px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#no-results-title {
+    font-family: HelveticaNeue-Bold;
+    font-size: 52px;
+    color: #004A80;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+#no-results-text {
+    font-family: HelveticaNeue;
+    font-size: 24px;
+    color: #000000;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 32px;
+}
+
+#search-again {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-again-show {
+    display: flex;
 }
 
 /* No Results Styles END */
+}
+
+/* Desktop Styles END */

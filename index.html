@@ -9,12 +9,14 @@
   </head>
   <body>
     <nav>
-        <div>
-            <img src="assets/logo.svg" alt="logo"/>
-        </div>
-        <div>
-            <img src="assets/icn_search.svg" alt="search"/>
-            <img src="assets/icn_person.svg" alt="person"/>
+        <div id="nav-container">
+            <div id="nav-left">
+                <img src="assets/logo.svg" alt="logo"/>
+            </div>
+            <div id="nav-right">
+                <img src="assets/icn_search.svg" alt="search"/>
+                <img src="assets/icn_person.svg" alt="person"/>
+            </div>
         </div>
     </nav>
     <main>
@@ -36,6 +38,11 @@
                         <input type="text" name="email" class="email" placeholder="EMAIL"/>
                         <input disabled type="submit" value="GO!" class="submit"/>
                     </form>
+                    <div hidden class="search-error">
+                        <div class="search-error-msg">
+                            Please add a valid email address
+                        </div>
+                    </div>
                     <div class="search-subtext">
                         <img src="assets/lock.svg" alt="lock"/>
                         Enter Any Email Address. They won't be notified.
@@ -162,6 +169,11 @@
                     <input type="text" name="email" class="email" placeholder="EMAIL"/>
                     <input type="submit" value="GO!" class="submit"/>
                 </form>
+                <div hidden class="search-error">
+                    <div class="search-error-msg">
+                        Please add a valid email address
+                    </div>
+                </div>
                 <div class="search-subtext">
                     <img src="assets/lock.svg" alt="lock"/>
                     Enter Any Email Address. They won't be notified.

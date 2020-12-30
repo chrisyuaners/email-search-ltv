@@ -9,6 +9,7 @@ $(document).ready(function() {
     const searchAgain = $('#search-again');
     const emailInput = $(".email");
     const formSubmit = $(".submit");
+    const errorMessage = $(".search-error");
 
     // code templates
     const loading = `
@@ -50,7 +51,7 @@ $(document).ready(function() {
         // })
         if (!userData) {
             initialLanding.innerHTML = noResults;
-            searchAgain.show();
+            searchAgain.addClass("search-again-show");
         }
     });
 
@@ -59,9 +60,10 @@ $(document).ready(function() {
         if (validEmail) {
             emailInput.removeClass("error");
             formSubmit.prop('disabled', false);
-
+            errorMessage.hide();
         } else {
             emailInput.addClass("error");
+            errorMessage.show();
         }
     });
     console.log('JS LOADED');
