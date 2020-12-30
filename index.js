@@ -3,8 +3,12 @@ $(document).ready(function() {
     console.log('JS LOADING...');
     // declare variables
     const URL = 'https://ltv-data-api.herokuapp.com/api/v1/records.json?email=';
+    const searchForm = $( ".search-form" );
     const mainContainer = document.querySelector('main');
-    const initialLanding = $('#landing-initial');
+    const initialLanding = document.querySelector('#landing-initial');
+    const searchAgain = $('#search-again');
+    const emailInput = $(".email");
+    const formSubmit = $(".submit");
 
     // code templates
     const loading = `
@@ -25,43 +29,39 @@ $(document).ready(function() {
         </div>
     `;
 
-    const searchAgain = `
-        <div id="search-container">
-            <div id="search-top">
-                <div class="search-title">
-                    Can't Find The Right Person?
-                </div>
-                <div class="search-text">
-                    <div>Try Again </div>
-                    <div>- Make a new search</div>
-                </div>
-            </div>
-            <div id="search-bottom">
-                <form id="search-form">
-                    <input type="text" name="email" id="email" placeholder="EMAIL"/>
-                    <input type="submit" value="GO!"/>
-                </form>
-                <div>Enter Any Email Address. They won't be notified.</div>
-            </div>
-        </div>
-    `;
+    // helper functions
+    function validateEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
 
     // add event listeners
-    $( "#search-form" ).submit(function( event ) {
+    searchForm.submit(function( event ) {
         event.preventDefault();
         const userData = null;
-        const input = $("#email").val();
-        $("#email").val('');
-        initialLanding.hide();
-        mainContainer.innerHTML = loading;
+        const input = $(".email").val();
+        $(".email").val('');
+        initialLanding.innerHTML = '';
+        initialLanding.innerHTML = loading;
         // fetch(`${URL}${$("#email").val()}`)
         // .then(resp => resp.json())
         // .then(result => {
         //     console.log(result);
         // })
         if (!userData) {
-            mainContainer.innerHTML = noResults;
-            mainContainer.innerHTML += searchAgain;
+            initialLanding.innerHTML = noResults;
+            searchAgain.show();
+        }
+    });
+
+    emailInput.keyup(function() {
+        const validEmail = validateEmail($(".email").val());
+        if (validEmail) {
+            emailInput.removeClass("error");
+            formSubmit.prop('disabled', false);
+
+        } else {
+            emailInput.addClass("error");
         }
     });
     console.log('JS LOADED');
