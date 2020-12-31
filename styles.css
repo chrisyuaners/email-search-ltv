@@ -308,7 +308,48 @@ mark.search-text-color {
 /* Tablet Styles START */
 
 @media screen and (min-width: 768px) {
+    /* Landing Styles START */
 
+    #search-container, #search-again {
+        height: 323px;
+    }
+
+    .search-form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .email {
+        width: 495px;
+        margin-right: 20px;
+    }
+
+    .submit {
+        font-size: 24px;
+        width: 180px;
+        height: 70px;
+        margin-top: 0px;
+    }
+
+    .search-text {
+        margin: 15px 55px 0px 55px;
+    }
+
+    .search-subtext {
+        margin: 20px 325px 0px 0px;
+    }
+
+    .search-error {
+        width: 545px;
+    }
+
+    .search-error-msg {
+        width: 259px;
+        margin-top: -5px;
+        margin-left: 0px;
+    }
+    
+    /* Landing Styles END */
 }
 
 /* Tablet Styles END */
@@ -381,12 +422,6 @@ mark.search-text-color {
 
     .search-error {
         width: 831px;
-    }
-
-    .search-error-msg {
-        width: 259px;
-        margin-top: -5px;
-        margin-left: 0px;
     }
 
     #info-container {
