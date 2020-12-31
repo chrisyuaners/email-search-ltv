@@ -27,22 +27,23 @@
                         Search Any Email Address
                     </div>
                     <div class="search-text">
-                        <div class="search-text-color">Start Here </div>
                         <div>
-                             - Look up the owner's name, photos and online profiles. See what you find!
+                            <mark class="search-text-color">Start Here </mark> - Look up the owner's name, photos and online profiles. See what you find!
                         </div>
                     </div>
                 </div>
                 <div class="search-bottom">
                     <form class="search-form">
-                        <input type="text" name="email" class="email" placeholder="EMAIL"/>
+                        <div>
+                            <input type="text" name="email" class="email" placeholder="EMAIL"/>
+                            <div hidden class="search-error">
+                                <div class="search-error-msg">
+                                    Please add a valid email address
+                                </div>
+                            </div>
+                        </div>
                         <input disabled type="submit" value="GO!" class="submit"/>
                     </form>
-                    <div hidden class="search-error">
-                        <div class="search-error-msg">
-                            Please add a valid email address
-                        </div>
-                    </div>
                     <div class="search-subtext">
                         <img src="assets/lock.svg" alt="lock"/>
                         Enter Any Email Address. They won't be notified.
@@ -160,20 +161,21 @@
                     Can't Find The Right Person?
                 </div>
                 <div class="search-text">
-                    <div class="search-text-color">Try Again </div>
-                    <div> - Make a new search</div>
+                    <div>
+                        <mark class="search-text-color">Try Again </mark> - Make a new search
+                    </div>
                 </div>
             </div>
             <div class="search-bottom">
                 <form class="search-form">
                     <input type="text" name="email" class="email" placeholder="EMAIL"/>
+                    <div hidden class="search-error">
+                        <div class="search-error-msg">
+                            Please add a valid email address
+                        </div>
+                    </div>
                     <input type="submit" value="GO!" class="submit"/>
                 </form>
-                <div hidden class="search-error">
-                    <div class="search-error-msg">
-                        Please add a valid email address
-                    </div>
-                </div>
                 <div class="search-subtext">
                     <img src="assets/lock.svg" alt="lock"/>
                     Enter Any Email Address. They won't be notified.
