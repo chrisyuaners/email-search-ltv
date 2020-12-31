@@ -308,6 +308,24 @@ mark.search-text-color {
 /* Tablet Styles START */
 
 @media screen and (min-width: 768px) {
+    /* Base Styles START */
+    
+    footer {
+        height: 88px;
+        flex-direction: row;
+    }
+
+    #footer-text {
+        width: 575px;
+        height: 60px;
+    }
+
+    #footer-links {
+        margin: 25px 0 25px 0;
+    }
+
+    /* Base Styles START */
+
     /* Landing Styles START */
 
     #search-container, #search-again {
@@ -348,6 +366,54 @@ mark.search-text-color {
         margin-top: -5px;
         margin-left: 0px;
     }
+
+    #info-container {
+        height: 800px;
+    }
+
+    #info-title {
+        font-size: 48px;
+    }
+
+    #info-text {
+        font-size: 20px;
+        width: 703px;
+        height: 112px;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #bullet-container {
+        display: flex;
+        width: 755px;
+    }
+
+    .bullet {
+        width: 344px;
+        margin-bottom: 20px;
+    }
+
+    .bullet-left {
+        width: 60px;
+        height: 60px;
+    }
+
+    .bullet-number {
+        font-size: 34px;
+        margin-top: 9px;
+    }
+
+    .bullet-right {
+        width: 263px;
+    }
+
+    .bullet-title {
+        font-size: 20px;
+    }
+
+    .bullet-text {
+        font-size: 16px;
+    }
     
     /* Landing Styles END */
 }
@@ -358,7 +424,6 @@ mark.search-text-color {
 
 @media screen and (min-width: 1200px) {
     /* Base Styles START */
-
     #nav-container {
         margin: auto;
     }
@@ -372,11 +437,6 @@ mark.search-text-color {
         width: 960px;
         height: 40px;
     }
-
-    #footer-links {
-        margin: 25px 0 25px 0;
-    }
-
     /* Base Styles END */
 
     /* Landing Styles START */
@@ -425,7 +485,6 @@ mark.search-text-color {
     }
 
     #info-container {
-        background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
         height: 800px;
     }
 
@@ -443,7 +502,6 @@ mark.search-text-color {
     }
 
     #bullet-container {
-        display: flex;
         width: 1040px;
     }
 
@@ -510,7 +568,6 @@ mark.search-text-color {
     .search-again-show {
         display: flex;
     }
-
     /* No Results Styles END */
 }
 
