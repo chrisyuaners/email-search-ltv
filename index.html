@@ -2,6 +2,7 @@
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="index.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -168,10 +169,12 @@
             </div>
             <div class="search-bottom">
                 <form class="search-form">
-                    <input type="text" name="email" class="email" placeholder="EMAIL"/>
-                    <div hidden class="search-error">
-                        <div class="search-error-msg">
-                            Please add a valid email address
+                    <div>
+                        <input type="text" name="email" class="email" placeholder="EMAIL"/>
+                        <div hidden class="search-error">
+                            <div class="search-error-msg">
+                                Please add a valid email address
+                            </div>
                         </div>
                     </div>
                     <input type="submit" value="GO!" class="submit"/>
