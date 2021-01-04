@@ -158,13 +158,11 @@ $(document).ready(function() {
         initialLanding.innerHTML = '';
         initialLanding.innerHTML = loading;
         // fetch request with email input from user
-        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`${URL}${input}`)}`)
-            .then(response => {
-                if (response.ok) return response.json()
-                throw new Error('Network response was not ok.')
-            })
+        fetch(`https://protected-ridge-48391.herokuapp.com/${`${URL}${input}`}`)
+            .then(response => response.json())
             .then(data => {
-                const parsedData = JSON.parse(data.contents);
+                // const parsedData = JSON.parse(data.contents);
+                const parsedData = data;
                 if (parsedData.length === undefined) {
                     userData.push(parsedData);
                 }
@@ -184,7 +182,8 @@ $(document).ready(function() {
                     resultTitle.innerHTML = resultCount > 1 ? `${resultCount} Results` : '1 Result';
                     searchAgain.addClass("search-again-show");
                 }
-            });
+            })
+            .catch(err => console.log(err));
     });
 
     emailInput.keyup(function() {
