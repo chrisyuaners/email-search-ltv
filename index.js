@@ -149,6 +149,7 @@ $(document).ready(function() {
     }
 
     // add event listeners
+    // action when form is submitted
     searchForm.submit(function( event ) {
         event.preventDefault();
         window.scrollTo(0, 0);
@@ -161,11 +162,11 @@ $(document).ready(function() {
         fetch(`https://protected-ridge-48391.herokuapp.com/${`${URL}${input}`}`)
             .then(response => response.json())
             .then(data => {
-                // const parsedData = JSON.parse(data.contents);
-                const parsedData = data;
-                if (parsedData.length === undefined) {
-                    userData.push(parsedData);
+                // check if data is empty or a match was found
+                if (data.length === undefined) {
+                    userData.push(data);
                 }
+                // render page depending on results
                 if (userData.length === 0) {
                     initialLanding.innerHTML = noResults;
                     searchAgain.addClass("search-again-show");
@@ -186,6 +187,7 @@ $(document).ready(function() {
             .catch(err => console.log(err));
     });
 
+    // add validation to email input
     emailInput.keyup(function() {
         const validEmail = validateEmail($(".email").val());
         if (validEmail) {
